@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Share Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+            <h2>Welcome to the File Share Platform</h2>
+            <div id = "buttons">
+            <a href="#home" class = "Btn">Home</a>
+            <a href="#about" class = "Btn">About Us</a>
+            <a href="#contact" class = "Btn">Contact Us</a>
+            <a href="#faq" class = "Btn">FAQ</a>
+            <a href="#feedback" class = "Btn">Feedback</a>
+            </div>
+        </div>
+        <section id = "home">
+    <div class="maincontainer">
+        
+        <h1><i>Upload and Share </i></h1>
+        <h3>Select a file to upload</h3>
+        <h3>The file size must be less than 500 MB</h3>
+
+        <div class="buttons">
+    <p>Choose a file:</p>
+
+    <input type="file" id="file">
+    <label for="file" id = "fileLabel">Choose File</label>
+
+    <button id="upload">Upload</button>
+</div>
+
+        <div id = "generatedCode">
+                <button id="generateCodeButton">Generate Code</button>
+                <h2>Generated Code</h2>
+                <div id="codeContainer"> <p id="code"></p></div>
+                <button id="copyCode">Copy Code</button>
+               
+        </div>
+        <div id = "receivePage ">
+                <a href="receive.html"><button id="receivePageButton">Go to Receive Page</button></a>
+
+        </div>
+
+    </div>
+    </section>
+    <section id = "about">
+        <div id = "aboutContent">
+        <h2>About Us</h2>
+        <p>Welcome to our file sharing platform!</p>
+        <p>Our mission is to provide a simple and secure way for users to share files with others. Whether you need to send a document, photo, or video, our platform makes it easy to upload and share your files with just a few clicks.</p>
+        <p>We understand the importance of privacy and security when it comes to file sharing.
+            </div>
+    </section>
+    <section id = "contact">
+        <div id = "contactContent">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, please feel free to contact us.</p>
+        </div>
+    </section>
+    <section id = "faq">
+        <div id = "faqContent">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q: How do I upload a file?</strong></p>
+        <p>A: Simply click on the "Choose a file" button, select the file you want to upload, and then click the "Upload" button.</p>
+        <p><strong>Q: Is there a file size limit?</strong></p>
+        <p>A: Yes, the maximum file size allowed for upload is 500 MB.</p>
+        <p><strong>Q: How do I receive a file?</strong></p>
+        <p>A: To receive a file, you will need to enter the code provided by the sender on the receive page.</p>
+        </div>
+    </section>
+<section id = "feedback">
+    <div id = "feedbackContent">
+        <h2>Feedback</h2>
+        <p>We value your feedback! Please let us know if you have any suggestions or comments to help us improve our platform.</p>
+        <input type="text" id="feedbackMessage" placeholder="Enter your feedback here">
+        <button id="submitFeedback">Submit Feedback</button>
+    </div>
+</section>
+
+    <section id = "footer">
+        <div id = "footerContent">
+        <p>&copy; 2023 File Share Platform. All rights reserved.</p>
+        </div>
+    </section>
+    <script src="logic.js"></script>
+    <script src = "feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* paste this inside body, .maincontainer, and each section */
+
+body {
+    
+    font-family: 'Figtree', sans-serif;
+    background-color: #f5f5f5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect x='8' y='38' width='44' height='32' rx='3' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.18'/%3E%3Cpath d='M8 44 Q8 38 14 38 L26 38 L30 43 L52 43 Q52 43 52 44' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.18'/%3E%3Crect x='68' y='14' width='26' height='34' rx='2' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.18'/%3E%3Cpath d='M86 14 L86 22 L94 22' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.18'/%3E%3Cline x1='72' y1='28' x2='90' y2='28' stroke='%231a1a1a' stroke-width='1' opacity='0.13'/%3E%3Cline x1='72' y1='33' x2='90' y2='33' stroke='%231a1a1a' stroke-width='1' opacity='0.13'/%3E%3Cline x1='72' y1='38' x2='84' y2='38' stroke='%231a1a1a' stroke-width='1' opacity='0.13'/%3E%3Cline x1='22' y1='92' x2='22' y2='108' stroke='%231a1a1a' stroke-width='1.5' opacity='0.15'/%3E%3Cpolyline points='16%2C98 22%2C92 28%2C98' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.15'/%3E%3Cline x1='16' y1='108' x2='28' y2='108' stroke='%231a1a1a' stroke-width='1.5' opacity='0.15'/%3E%3Ccircle cx='82' cy='74' r='3' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.16'/%3E%3Ccircle cx='96' cy='68' r='3' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.16'/%3E%3Ccircle cx='96' cy='82' r='3' fill='none' stroke='%231a1a1a' stroke-width='1.5' opacity='0.16'/%3E%3Cline x1='85' y1='73' x2='93' y2='69' stroke='%231a1a1a' stroke-width='1' opacity='0.13'/%3E%3Cline x1='85' y1='75' x2='93' y2='81' stroke='%231a1a1a' stroke-width='1' opacity='0.13'/%3E%3Crect x='52' y='88' width='20' height='26' rx='2' fill='none' stroke='%231a1a1a' stroke-width='1.2' opacity='0.14'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+/* ── HEADER ────────────────────────────────────────────── */
+#header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px;
+    background-color: lightblue;
+    border-bottom: 2px solid black;
+    border-radius: 0 0 12px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 0 black;
+}
+
+#header h2 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+#buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.Btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 6px 14px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    transition: background-color 0.15s, transform 0.1s;
+    box-shadow: 2px 2px 0 black;
+}
+
+.Btn:hover {
+    background-color: #e0e0e0;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 black;
+}
+
+.Btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 black;
+}
+
+/* ── MAIN CONTAINER ─────────────────────────────────────── */
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffbe0b;
+    padding: 60px 24px;
+    gap: 20px;
+    border: 2px solid black;
+    box-shadow: 6px 6px 0 black;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 800;
+    color: blue;
+    letter-spacing: -0.03em;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.maincontainer h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    text-align: center;
+    margin-top: -8px;
+}
+
+/* ── UPLOAD CARD ────────────────────────────────────────── */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 28px 32px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    gap: 14px;
+    box-shadow: 4px 4px 0 black;
+}
+
+.buttons p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+}
+
+#file {
+    display: none;
+}
+
+#fileLabel {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: white;
+    background-color: blue;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 black;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+#fileLabel:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 black;
+}
+
+#fileLabel:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 black;
+}
+
+/* ── BUTTONS ────────────────────────────────────────────── */
+button {
+    font-family: 'Figtree', sans-serif;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0 black;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 black;
+}
+
+button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 black;
+}
+
+/* ── GENERATED CODE ─────────────────────────────────────── */
+#generatedCode {
+    text-align: center;
+    border: 2px solid black;
+    padding: 24px 28px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 480px;
+    background-color: rgba(255,255,255,0.45);
+    box-shadow: 4px 4px 0 black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#generatedCode h2 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.5);
+}
+
+#codeContainer {
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 14px 24px;
+    width: 100%;
+    box-shadow: 2px 2px 0 black;
+}
+
+#code {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: black;
+}
+
+#generateCodeButton {
+    background-color: blue;
+    width: 100%;
+}
+
+/* ── RECEIVE PAGE ───────────────────────────────────────── */
+#receivePage {
+    width: 100%;
+    max-width: 480px;
+}
+
+#receivePage a {
+    display: block;
+}
+
+#receivePageButton {
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 13px;
+    width: 100%;
+    box-shadow: 4px 4px 0 black;
+    font-size: 1rem;
+}
+
+/* ── SECTIONS ───────────────────────────────────────────── */
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+}
+
+/* ── CONTENT CARDS ──────────────────────────────────────── */
+#aboutContent,
+#contactContent,
+#faqContent,
+#feedbackContent {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 44px;
+    border-radius: 14px;
+    border: 2px solid black;
+    box-shadow: 6px 6px 0 black;
+}
+
+#aboutContent  { background-color: #fb5607; }
+#contactContent{ background-color: #ff006e; }
+#faqContent    { background-color: #8338ec; }
+#feedbackContent{ background-color: #3a86ff; }
+
+#aboutContent h2,
+#contactContent h2,
+#faqContent h2,
+#feedbackContent h2 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: black;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(0,0,0,0.25);
+}
+
+#aboutContent p,
+#contactContent p,
+#faqContent p,
+#feedbackContent p {
+    font-size: 0.97rem;
+    font-weight: 500;
+    color: rgba(0,0,0,0.75);
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+#faqContent p strong {
+    color: black;
+    font-weight: 700;
+}
+
+/* ── FEEDBACK INPUTS ────────────────────────────────────── */
+#feedbackMessage {
+    font-family: 'Figtree', sans-serif;
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: rgba(255,255,255,0.5);
+    color: black;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    outline: none;
+    box-shadow: 3px 3px 0 black;
+    transition: box-shadow 0.15s;
+}
+
+#feedbackMessage::placeholder {
+    color: rgba(0,0,0,0.45);
+}
+
+#feedbackMessage:focus {
+    box-shadow: 4px 4px 0 black;
+    background: rgba(255,255,255,0.65);
+}
+
+#submitFeedback {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+}
+
+#submitFeedback:hover {
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+    transform: translate(-1px, -1px);
+}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+#footer {
+    min-height: auto;
+    padding: 0;
+}
+
+#footerContent {
+    width: 100%;
+    padding: 24px 32px;
+    background-color: #d3dee1;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+#footerContent p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.55);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+    #header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+        border-radius: 0;
+    }
+
+    #buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #aboutContent,
+    #contactContent,
+    #faqContent,
+    #feedbackContent {
+        padding: 28px 24px;
+    }
+}
