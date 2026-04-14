@@ -3,12 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Share Platform</title>
+    <title>Receive File — FileShare</title>
+    <link rel="stylesheet" href="receive.css">
 </head>
 <body>
-    <h3>Receive File</h3>
-    <h4>Please enter the code to receive the file:</h4>
-    <input type="text" id = "codeInput" placeholder="Enter code here">
-    <button id="receive">Receive</button>
+
+    <div id="header">
+        <h2>File Share Platform</h2>
+        <div id="buttons">
+            <a href="index.html#home" class="Btn">Home</a>
+            <a href="index.html#about" class="Btn">About</a>
+            <a href="index.html#faq" class="Btn">FAQ</a>
+        </div>
+    </div>
+
+    <main class="maincontainer">
+        <h1><i>Receive a File</i></h1>
+        <h3>Enter the unique 6-digit code to start your download</h3>
+
+        <div class="input-section">
+            <p>Access Code:</p>
+            <div class="code-entry">
+                <input type="password" id="code" placeholder="••••••" maxlength="6">
+                <button type="button" id="toggleEye">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="black" stroke-width="2" fill="none">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="dot-indicator" id="dotGroup">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <button id="downloadBtn">Download File</button>
+
+        <div id="status" class="status-box"></div>
+
+        <div class="info-note">
+            <p><strong>Note:</strong> Codes are single-use and expire after 24 hours.</p>
+        </div>
+    </main>
+
+    <div id="footer">
+        <div id="footerContent">
+            <p>&copy; 2026 File Share Platform. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Keeping it consistent with your feedback logic
+        const input = document.getElementById('code');
+        const dots = document.querySelectorAll('#dotGroup span');
+        const eyeBtn = document.getElementById('toggleEye');
+
+        input.addEventListener('input', () => {
+            const val = input.value.trim();
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i < val.length);
+            });
+        });
+
+        eyeBtn.addEventListener('click', () => {
+            input.type = input.type === 'password' ? 'text' : 'password';
+        });
+    </script>
+    <script src="receive.js"></script>
 </body>
 </html>
